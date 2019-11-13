@@ -1,0 +1,35 @@
+{
+  "name": "dynamodb-action",
+  "version": "1.0.0",
+  "description": "Starts DynamoDB Local in background as a Docker container for support with GitHub Actions",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rrainn/dynamodb-action.git"
+  },
+  "keywords": [
+    "dynamodb",
+    "dynamo",
+    "aws",
+    "amazon",
+    "database",
+    "local",
+    "github",
+    "actions",
+    "action",
+    "docker"
+  ],
+  "author": "rrainn, Inc.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rrainn/dynamodb-action/issues"
+  },
+  "homepage": "https://github.com/rrainn/dynamodb-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.1.3",
+    "@actions/exec": "^1.0.1"
+  }
+}
