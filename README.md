@@ -1,2 +1,12 @@
 # dynamodb-action
-IN DEVELOPMENT 📦 GitHub Action - DynamoDB Local GitHub Action
+
+This GitHub Action allows you to super easily setup a DynamoDB Local instance within GitHub Actions to use DynamoDB within your CI system.
+
+## Example Usage
+
+#### .github/workflows/ci.yml
+
+```yml
+- name: Setup DynamoDB Local
+  uses: rrainn/dynamodb-actions@v1.0
+```
