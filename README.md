@@ -8,5 +8,5 @@ This GitHub Action allows you to super easily setup a DynamoDB Local instance wi
 
 ```yml
 - name: Setup DynamoDB Local
-  uses: rrainn/dynamodb-actions@v1.0
+  uses: rrainn/dynamodb-actions@v1.0.1
 ```
