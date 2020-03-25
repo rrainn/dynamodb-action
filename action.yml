@@ -1,5 +1,26 @@
 name: 'Start DynamoDB in GitHub Actions'
 description: 'Starts DynamoDB Local in background as a Docker container for support with GitHub Actions'
+inputs:
+  dbPath:
+    description: 'The path for the database. If undefined, inMemory will be used. Default: undefined'
+    required: false
+  sharedDb:
+    description: 'If sharedDb should be enabled. Default: undefined'
+    required: false
+  delayTransientStatuses:
+    description: 'If delayTransientStatuses should be enabled. Default: undefined'
+    required: false
+  optimizeDbBeforeStartup:
+    description: 'If optimizeDbBeforeStartup should be enabled. Default: undefined'
+    required: false
+  port:
+    description: 'The port that DynamoDB should run on. Default: 8000'
+    required: false
+    default: '8000'
+  cors:
+    description: 'The cors settings that should be used. Default: *'
+    required: false
+    default: '*'
 runs:
   using: 'node12'
   main: 'main.js'
