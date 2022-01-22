@@ -10,7 +10,7 @@ Below is the default commands and settings for this action. For any properties t
 
 ```yml
 - name: Setup DynamoDB Local
-  uses: rrainn/dynamodb-action@v2.0.0
+  uses: rrainn/dynamodb-action@v2.0.1
   with:
     dbPath: # undefined by default, if this is undefined inMemory will be used
     sharedDb: # undefined by default
