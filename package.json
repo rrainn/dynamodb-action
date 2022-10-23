@@ -1,6 +1,6 @@
 {
   "name": "dynamodb-action",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "Starts DynamoDB Local in background as a Docker container for support with GitHub Actions",
   "main": "main.js",
   "scripts": {
