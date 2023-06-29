@@ -16,6 +16,7 @@ Below is the default commands and settings for this action. For any properties t
     sharedDb: # undefined by default
     delayTransientStatuses: # undefined by default
     optimizeDbBeforeStartup: # undefined by default
+    version: # "latest" by default
     port: 8000
     cors: '*'
 ```
