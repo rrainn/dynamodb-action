@@ -17,6 +17,10 @@ inputs:
     description: 'The port that DynamoDB should run on. Default: 8000'
     required: false
     default: '8000'
+  version:
+    description: 'The Docker image version'
+    required: false
+    default: 'latest'
   cors:
     description: 'The cors settings that should be used. Default: *'
     required: false

@@ -1,7 +1,7 @@
 const core = require("@actions/core");
 const exec = require("@actions/exec");
 
-const settings = ["port", "dbPath", "sharedDb", "cors", "delayTransientStatuses", "optimizeDbBeforeStartup"].reduce((obj, key) => {
+const settings = ["port", "dbPath", "sharedDb", "cors", "delayTransientStatuses", "optimizeDbBeforeStartup", "version"].reduce((obj, key) => {
 	obj[key] = core.getInput(key);
 	return obj;
 }, {});
@@ -14,5 +14,5 @@ const settings = ["port", "dbPath", "sharedDb", "cors", "delayTransientStatuses"
 		settings.delayTransientStatuses ? `-delayTransientStatuses` : null,
 		settings.optimizeDbBeforeStartup ? `-optimizeDbBeforeStartup` : null
 	].filter((a) => Boolean(a)).join(" ");
-	await exec.exec(`sudo docker run --name dynamodb -d -p ${settings.port}:${settings.port} amazon/dynamodb-local -jar DynamoDBLocal.jar -port ${settings.port}${extraArguments ? ` ${extraArguments}` : ""}`);
+	await exec.exec(`sudo docker run --name dynamodb -d -p ${settings.port}:${settings.port} amazon/dynamodb-local:${settings.version} -jar DynamoDBLocal.jar -port ${settings.port}${extraArguments ? ` ${extraArguments}` : ""}`);
 })();
